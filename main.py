@@ -79,4 +79,14 @@ with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
                 pass
 
             case 8:
-                pass
+           
+
+            while True:
+                qtd_palavras = []
+                a = input("Digite uma palavra ou 'sair' para terminar: ").strip().lower()
+                if a == "sair":
+                    break
+                    
+                qtd_palavras.append(a)
+               
+                print(f"Quantidade de palavras até agora: {len(qtd_palavras)}")
