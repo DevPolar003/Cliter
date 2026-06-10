@@ -45,11 +45,14 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
                 else:
                     for linha in linhas:
                         print(linha.strip())
-                        
             case 4:
+        
                 
             case 5:
-              
+                arquivo.seek(0)
+                texto = "".join(arquivo)
+                qtd_palavras = texto.split()
+                print(len(qtd_palavras))
             case 6:
                
             case 7:
