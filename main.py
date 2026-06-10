@@ -1,7 +1,9 @@
 import os
 os.system("cls")
+
 nome_arquivo = "dados.txt"
-with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
+
+with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
     
     while True:
         print("\n--- MENU DE OPÇÕES ---")
@@ -27,16 +29,18 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
                 print("Saindo....")   
                 break
                 
-              case 1:
+            case 1:
                 dados = input("Digite o texto: ")
-                arquivo.write(dados)
-                print("linha gravada com sucesso!")
+                arquivo.write(dados + "\n")
+                arquivo.flush() 
+                print("Linha gravada com sucesso!")
 
             case 2:
+                
+                pass 
                
             case 3:
-                 print(f"\n--- {nome_arquivo}---")
-               
+                print(f"\n--- {nome_arquivo} ---")
                 arquivo.seek(0)
                 linhas = arquivo.readlines()
                 
@@ -45,16 +49,19 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
                 else:
                     for linha in linhas:
                         print(linha.strip())
+
             case 4:
+                pass
         
-                
             case 5:
                 arquivo.seek(0)
                 texto = "".join(arquivo)
                 qtd_palavras = texto.split()
-                print(len(qtd_palavras))
+                print(f"Quantidade total de palavras: {len(qtd_palavras)}")
+
             case 6:
-                qtd_letras = int(input("Quantidade de letras: ")
+               
+                qtd_letras = int(input("Quantidade de letras: ")) 
                 count = 0
                      
                 arquivo.seek(0)
@@ -64,9 +71,12 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
         
                 for palavra in qtd_palavras:
                     if len(palavra) == qtd_letras:
-                        count++
+                        count += 1
                             
-                print(count)
-            case 7:
+                print(f"Palavras com {qtd_letras} letras: {count}")
 
-                
+            case 7:
+                pass
+
+            case 8:
+                pass
