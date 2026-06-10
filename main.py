@@ -35,7 +35,17 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
             case 2:
                
             case 3:
+                 print(f"\n--- {nome_arquivo}---")
                
+                arquivo.seek(0)
+                linhas = arquivo.readlines()
+                
+                if not linhas:
+                    print(f"Não há nada no arquivo {nome_arquivo}")
+                else:
+                    for linha in linhas:
+                        print(linha.strip())
+                        
             case 4:
                 
             case 5:
