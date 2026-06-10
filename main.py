@@ -8,6 +8,12 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
         print("0 - SAIR")
         print("1 - Gravar uma linha")
         print("2 - Gravar varias linhas")
+        print("3 - Exibir o conteudo do arquivo")
+        print("4 - Exibir uma linha dada pelo usuario")
+        print("5 - Contar palavras")
+        print("6 - Contar caracteres")
+        print("7 - Contar palavras com N letras")
+        print("8 - Contar palavras dadas pelo usuário")
 
         try:
             option = int(input("Selecione uma das opções: "))
