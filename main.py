@@ -36,9 +36,12 @@ with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
                 print("Linha gravada com sucesso!")
 
             case 2:
-                
-                pass 
-               
+                palavras = []
+                qtd_de_palavra = int(input("digite quantas palavras voce quer escrer"))
+                for i in range (qtd_de_palavra):
+                      frases = input("digite a palavra: ")
+                      palavras.append(frases + "\n")
+                arquivo.writelines(palavras)
             case 3:
                 print(f"\n--- {nome_arquivo} ---")
                 arquivo.seek(0)
@@ -51,8 +54,13 @@ with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
                         print(linha.strip())
 
             case 4:
-                pass
-        
+                    arquivo.seek(0)
+                    linhas = arquivo.readlines()
+                    linha_desejada = int(input(f"Defina a linha que quer ver (1 a {len(linhas)}): "))
+                    if 0 <= linha_desejada <= len(linhas):
+                            print(f"Conteúdo: {linhas[linha_desejada - 1]}")
+                    else:
+                            print("Essa linha não existe no arquivo!")
             case 5:
                 arquivo.seek(0)
                 texto = "".join(arquivo)
@@ -79,8 +87,15 @@ with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
                 pass
 
             case 8:
+                arquivo.seek(0)
+                palavras = arquivo.read()
+                palavras2 = palavras.split()
+                n = int(input("digite o numero de caracteres: "))
+                for palavras2 in palavras2:
+                    if len(palavras) == n:
+                        count = count + 1
+                print(f"existem {count} palavras com {n}")
            
-
             while True:
                 qtd_palavras = []
                 a = input("Digite uma palavra ou 'sair' para terminar: ").strip().lower()
