@@ -54,7 +54,19 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
                 qtd_palavras = texto.split()
                 print(len(qtd_palavras))
             case 6:
-               
+                qtd_letras = int(input("Quantidade de letras: ")
+                count = 0
+                     
+                arquivo.seek(0)
+                texto = "".join(arquivo)
+        
+                qtd_palavras = texto.split()
+        
+                for palavra in qtd_palavras:
+                    if len(palavra) == qtd_letras:
+                        count++
+                            
+                print(count)
             case 7:
 
                 
