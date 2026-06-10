@@ -22,12 +22,26 @@ with open(nome_arquivo, 'w+', encoding='utf-8') as arquivo:
             continue
 
         match option:
-            
+
             case 0:
                 print("Saindo....")   
                 break
-
-            case 1:
+                
+              case 1:
                 dados = input("Digite o texto: ")
                 arquivo.write(dados)
                 print("linha gravada com sucesso!")
+
+            case 2:
+               
+            case 3:
+               
+            case 4:
+                
+            case 5:
+              
+            case 6:
+               
+            case 7:
+
+                
