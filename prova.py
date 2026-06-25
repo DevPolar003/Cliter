@@ -115,8 +115,7 @@ with open(nome_arquivo, 'a+', encoding='utf-8') as arquivo:
                     palavras = arquivo.read()
                     palavras2 = palavras.split()
 
-                    n = int(
-                        input("Digite o numero de caracteres: "))
+                    n = int(input("Digite o numero de caracteres: "))
 
                     for palavra in palavras2:
                         if len(palavra) == n:
